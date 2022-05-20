@@ -1,0 +1,46 @@
+put http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "name": "John",
+  "email": "@a",
+  "password": "test"
+}
+###
+post http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "@a",
+  "password": "test"
+}
+###
+get http://localhost:3000/userinfo
+###
+PATCH http://localhost:3000/user
+Content-Type: application/json
+
+{
+  "name": "nick"
+  
+}
+###
+DELETE http://localhost:3000/logout
+
+
+
+###
+post http://localhost:3000/addnight
+Content-Type: application/json
+
+{
+  "sleepTime": "12",
+  "sleepQuality": "7"
+}
+###
+GET http://localhost:3000/qualitydreams 
+Content-Type: application/json
+
+{
+  "sleepQuality": "0"
+}
